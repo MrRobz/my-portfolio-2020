@@ -1,0 +1,39 @@
+<NavBar @active="contact"/>
+
+<div class="pt-24 mx-20 text-white h-screen">
+  <div class="font-bold text-4xl underline">
+    Contact
+  </div>
+
+  <form class="w-full">
+    <div class="flex mt-24 text-3xl">
+      <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 
+        focus:border-primary" 
+        type="text" 
+        placeholder="Name" 
+        aria-label="Full name">
+
+      <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 ml-5
+        focus:border-primary" 
+        type="email" 
+        placeholder="Email" 
+        aria-label="email">
+    </div>
+
+    <div class="mt-10">
+      <textarea 
+        class="appearance-none focus:outline-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 text-3xl
+          focus:border-primary"
+        placeholder="Message"
+        aria-label="message"
+        name="" rows="5"></textarea>
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <button class="text-light text-2xl rounded-full border-2 px-24 py-2
+        hover:border-primary hover:text-primary">
+        send
+      </button>
+    </div>
+  </form>
+</div>

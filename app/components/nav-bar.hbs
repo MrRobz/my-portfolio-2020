@@ -1,0 +1,34 @@
+<div class="absolute text-white w-screen flex justify-between px-10 my-5">
+  <a href="/" class="flex items-center">
+    <span class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-xl">
+      R
+    </span>
+    <span class="ml-2 text-lg font-light">
+      <span class="font-semibold">Robie</span>.dev
+    </span>
+  </a>
+
+  <div>
+    {{log @active}}
+    <span class="ml-8 hover:text-white {{if (eq @active "about-me") "text-white font-semibold" "text-gray-300"}}">
+      <LinkTo @route="index">
+        About Me
+      </LinkTo>
+    </span>
+    <span class="ml-8 text-gray-300 hover:text-white">
+      <a href="https://mylittletechlife.com/">
+        Blog
+      </a>
+    </span>
+    <span class="ml-8 hover:text-white {{if (eq @active "projects") "text-white font-semibold" "text-gray-300"}}">
+      <LinkTo @route="projects">
+        Projects
+      </LinkTo>
+    </span>
+    <span class="ml-8 hover:text-white {{if (eq @active "contact") "text-white font-semibold" "text-gray-300"}}">
+      <LinkTo @route="contact">
+        Contact
+      </LinkTo>
+    </span>
+  </div>
+</div>
