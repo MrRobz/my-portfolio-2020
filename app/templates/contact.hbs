@@ -5,16 +5,21 @@
     Contact
   </div>
 
-  <form class="w-full">
+  <form class="w-full"
+      method="POST"
+      name="contact"
+      data-netlify="true">
     <div class="flex mt-24 text-3xl">
       <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 
-        focus:border-primary" 
+        focus:border-primary"
+        name="name"
         type="text" 
         placeholder="Name" 
         aria-label="Full name">
 
       <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 ml-5
-        focus:border-primary" 
+        focus:border-primary"
+        name="email"
         type="email" 
         placeholder="Email" 
         aria-label="email">
@@ -24,9 +29,10 @@
       <textarea 
         class="appearance-none focus:outline-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 text-3xl
           focus:border-primary"
+        name="message"
         placeholder="Message"
         aria-label="message"
-        name="" rows="5"></textarea>
+        rows="5"></textarea>
     </div>
 
     <div class="flex justify-center mt-10">

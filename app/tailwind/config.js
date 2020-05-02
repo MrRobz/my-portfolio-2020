@@ -7,7 +7,8 @@ module.exports = {
     enabled: isProduction,
     content: [
     './app/index.html',
-    './app/templates/**/*.hbs'
+    './app/templates/**/*.hbs',
+    './app/components/**/*.hbs'
     ]
   },
   target: 'relaxed',
