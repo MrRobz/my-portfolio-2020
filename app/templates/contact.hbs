@@ -1,24 +1,20 @@
 <NavBar @active="contact"/>
 
-<div class="pt-24 mx-20 text-white h-screen">
-  <div class="font-bold text-4xl underline">
+<div class="pt-24 text-white h-full mx-6 md:mx-10 lg:mx-20">
+  <div class="font-bold underline text-xl md:text-3xl lg:text-4xl">
     Contact
   </div>
 
-  <form class="w-full"
-      name="contact"
-      method="post">
+  <form class="w-full" name="contact" method="post">
     <input type="hidden" name="form-name" value="contact" />
-    <div class="flex mt-24 text-3xl">
-      <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 
-        focus:border-primary"
+    <div class="flex flex-col mt-5 text-xl md:flex-row md:text-2xl lg:text-3xl md:mt-12 lg:mt-24">
+      <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 focus:border-primary"
         name="name"
         type="text" 
         placeholder="Name" 
         aria-label="Full name">
 
-      <input class="appearance-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 ml-5
-        focus:border-primary"
+      <input class="appearance-none bg-transparent w-full text-white mr-3 mt-5 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 focus:border-primary md:ml-10 md:mt-0"
         name="email"
         type="email" 
         placeholder="Email" 
@@ -27,8 +23,7 @@
 
     <div class="mt-10">
       <textarea 
-        class="appearance-none focus:outline-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 text-3xl
-          focus:border-primary"
+        class="appearance-none focus:outline-none bg-transparent w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-b-2 border-gray-100 text-xl md:text-2xl lg:text-3xl focus:border-primary"
         name="message"
         placeholder="Message"
         aria-label="message"
@@ -36,7 +31,7 @@
     </div>
 
     <div class="flex justify-center mt-10">
-      <button class="text-light text-2xl rounded-full border-2 px-24 py-2
+      <button class="text-light text-xl rounded-full border-2 px-24 py-2 md:text-2xl
         hover:border-primary hover:text-primary">
         send
       </button>
