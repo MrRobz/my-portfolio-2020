@@ -2,26 +2,26 @@
 
 <main class="w-screen h-screen flex items-center justify-center">
   <div class="flex flex-col mb-10">
-    <span class="text-gray-400 text-lg">
+    <span class="flex text-gray-400 text-base md:text-lg">
       Ahoy! I’m
     </span>
-    <span class="text-primary text-6xl font-bold text-center" style="font-size: 80px;">
+    <span class="text-primary text-3xl font-bold text-center md:text-7xl">
       Robin Philip Thomas
     </span>
-    <div class="flex text-white text-center text-2xl justify-between" style="font-size: 25px;">
+    <div class="flex text-white text-center text-sm justify-between md:text-2xl md:flex-row">
       <span>
         Web Developer
       </span>
-      <span>|</span>
-      <span>
+      <span class="hidden md:block">|</span>
+      <span class="hidden md:block">
         Ember.js Enthusiast
       </span>
-      <span>|</span>
+      <span class="hidden md:block">|</span>
       <span>
         JavaScript Evangelist
       </span>
     </div>
-    <div class="flex items-center justify-center mt-5 text-white">
+    <div class="flex items-center justify-center mt-8 text-white md:mt-5">
       <a href="https://github.com/MalayaliRobz">
         {{svg-jar "github" class="mr-8 grow"}}
       </a>

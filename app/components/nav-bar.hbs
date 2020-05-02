@@ -1,6 +1,6 @@
-<div class="absolute text-white w-screen flex justify-between px-10 my-5">
+<div class="absolute text-white w-screen flex justify-between px-5 my-5 md:px-10">
   <a href="/" class="flex items-center">
-    <span class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-extrabold text-xl">
+    <span class="bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs md:text-xl md:w-10 md:h-10">
       R
     </span>
     <span class="ml-2 text-lg font-light">
@@ -8,8 +8,7 @@
     </span>
   </a>
 
-  <div>
-    {{log @active}}
+  <div class="text-xs md:text-base">
     <span class="ml-8 hover:text-white {{if (eq @active "about-me") "text-white font-semibold" "text-gray-300"}}">
       <LinkTo @route="index">
         About Me

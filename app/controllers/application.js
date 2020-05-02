@@ -21,6 +21,9 @@ export default class ApplicationController extends Controller {
         this.dom.style.top = '0';
         this.dom.style.left = '0';
         this.dom.style.zIndex = '-1';
+
+        this.dom.style.width = '100vw';
+        this.dom.style.height = '100vh';
         document.body.appendChild(this.dom);
     
         this.resize = this.resize.bind(this);
