@@ -1,0 +1,86 @@
+<NavBar @active="projects"/>
+
+<div class="pt-24 mx-20 text-white h-screen">
+  <div class="font-bold text-4xl underline">
+    <LinkTo @route="projects.index">
+      Projects
+    </LinkTo>
+  </div>
+
+  <div class="flex mt-10">
+    <div class="w-4/6 mr-3">
+      <span class="text-xs">
+        April 12 2020
+      </span>
+      <h3 class="font-bold text-3xl">
+        Freshdesk Portal Theme - Welkin Vertikalsa
+      </h3>
+      <div>
+        Welkin Vertikalsa is a simple vertical layout style portal theme for Freshdesk. It provides simple and user-friendly layouts to easily find knowledgebase articles in Freshdesk. It will provide a refreshing, friendly and positive experience for your users.
+        <br>
+        The Welkin Vertikalsa template will perfectly suit those websites that aim to keep their support page simple and efficient. Fully responsive and Retina ready.
+      </div>
+      <div class="flex mt-8">
+        <button class="text-light rounded-full border-2 px-24 py-2
+          hover:border-primary hover:text-primary"
+          {{on "click" this.toggleDonatePopup}}>
+          Download
+        </button>
+        <a href="/files/freshdesk-welkin-vertikalsa/demo/support/home.html" target="_blank">
+          <button class="text-light rounded-full border-2 px-24 py-2 ml-8
+            hover:border-primary hover:text-primary">
+            Live preview
+          </button>
+        </a>
+      </div>
+    </div>
+    
+    <div class="w-4/12">
+      <img src="/images/virtical-portal-theme.png" alt="" class="h-56 object-cover rounded-md">
+    </div>
+  </div>
+</div>
+
+{{#if showDonatePopup}}
+  {{#modal-dialog
+      onClose=this.toggleDonatePopup
+      targetAttachment="center"
+      containerClass="modal-donation"
+      translucentOverlay=true}}
+  <div class="flex justify-end">
+    <div class="cursor-pointer" {{on "click" this.toggleDonatePopup}}>
+     {{svg-jar "close"}}
+    </div>
+  </div>
+  <div class="flex flex-col items-center justify-center px-24 pt-5 pb-10 h-full w-full">
+    {{#unless isDownloading}}
+      <div class="text-3xl font-semibold mb-1">
+        Would you like to buy me a  {{svg-jar "coffee" class="inline"}}  first
+      </div>
+      <div class="text-medium mb-12">
+        If you like my products you can even come back later and give a donation.
+      </div>
+
+      <div class="flex mb-12">
+        <button class="font-light rounded-full border-2 px-24 py-2
+          hover:border-primary hover:text-primary"
+          {{on "click" this.downloadTheme}}>
+          Na I like free stuff!
+        </button>
+        
+        <a href="https://www.buymeacoffee.com/robie577"  target="_blank">
+          <button class="font-medium rounded-full border-2 px-24 py-2 ml-8"
+              {{on "click" this.downloadTheme}}
+            style="background-color: #5F7FFF; border-color: #5F7FFF">
+            {{svg-jar "coffee" class="inline"}} Buy me a coffee
+          </button>
+        </a>
+      </div>
+    {{else}}
+      <div>
+        Your download will begin shortly...
+      </div>
+    {{/unless}}
+  </div>
+  {{/modal-dialog}}
+{{/if}}

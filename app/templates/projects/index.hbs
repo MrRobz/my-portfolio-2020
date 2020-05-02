@@ -1,0 +1,39 @@
+<NavBar @active="projects"/>
+
+<div class="pt-24 mx-20 text-white h-screen">
+  <div class="font-bold text-4xl underline">
+    Projects
+  </div>
+
+  <div class="flex flex-col mt-5">
+    <div class="p-5 bg-gray-900 rounded-lg flex mb-2">
+      <div class="w-4/12">
+        <img src="/images/virtical-portal-theme.png" alt="" class="h-56 object-cover rounded-md">
+      </div>
+      <div class="w-4/6 flex flex-col justify-between">
+        <div>
+          <span class="text-xs mt-2">
+            April 12 2020
+          </span>
+          <div class="font-semibold text-3xl">
+            Freshdesk Portal Theme - Welkin Vertikalsa
+          </div>
+          <div class="text-gray-300 text-sm">
+            Welkin Vertikalsa is a simple vertical layout style portal theme for Freshdesk. It provides simple and user-friendly layouts to easily find knowledgebase articles in Freshdesk. It will provide a refreshing, friendly and positive experience for your users.
+          </div>
+        </div>
+        <div class="mb-2 text-sm font-semibold text-gray-400 hover:text-white flex">
+          <LinkTo @route="projects.freshdesk-welkin-vertikalsa">
+            <div class="flex items-center border px-2 py-1 rounded hover:border-primary hover:text-primary">
+              {{svg-jar "link" class="flex stroke-current fill-current w-4 h-4"}}
+              <span class="leading-snug ml-1">
+                know more
+              </span>
+            </div> 
+          </LinkTo>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

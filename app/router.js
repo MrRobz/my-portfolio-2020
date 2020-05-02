@@ -7,6 +7,8 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('projects');
+  this.route('projects', function() {
+    this.route('freshdesk-welkin-vertikalsa');
+  });
   this.route('contact');
 });
