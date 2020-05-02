@@ -23,7 +23,7 @@ export default class ApplicationController extends Controller {
         this.dom.style.zIndex = '-1';
 
         this.dom.style.width = '100vw';
-        this.dom.style.height = '100vh';
+        this.dom.style.height = window.innerHeight;
         document.body.appendChild(this.dom);
     
         this.resize = this.resize.bind(this);
