@@ -1,4 +1,47 @@
-<div class="absolute text-white w-screen flex justify-between px-5 my-5 md:px-10">
+<nav class="absolute text-white flex items-center justify-between flex-wrap p-6 w-full">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <a href="/" class="flex items-center">
+      <span class="bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs md:text-xl md:w-10 md:h-10">
+        R
+      </span>
+      <span class="ml-2 text-lg font-light">
+        <span class="font-semibold">Robie</span>.dev
+      </span>
+    </a>
+  </div>
+  <div class="block md:hidden">
+    <button class="flex items-center px-3 py-2 border rounded hover:text-white hover:border-white"
+      {{on "click" this.toggleExpand}}>
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div class="w-full block flex-grow md:w-auto md:flex md:items-center {{unless this.isExpanded "hidden"}}">
+    <div class="text-sm md:flex md:justify-end md:flex-grow">
+      <span class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-8 {{if (eq @active "about-me") "text-white font-semibold" "text-gray-300"}}">
+        <LinkTo @route="index">
+          About Me
+        </LinkTo>
+      </span>
+      <span class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-8 text-gray-300">
+        <a href="https://mylittletechlife.com/">
+          Blog
+        </a>
+      </span>
+      <span class="block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-8 {{if (eq @active "projects") "text-white font-semibold" "text-gray-300"}}">
+        <LinkTo @route="projects">
+          Projects
+        </LinkTo>
+      </span>
+      <span class="block mt-4 lg:inline-block lg:mt-0 hover:text-white {{if (eq @active "contact") "text-white font-semibold" "text-gray-300"}}">
+        <LinkTo @route="contact">
+          Contact
+        </LinkTo>
+      </span>
+    </div>
+  </div>
+</nav>
+
+{{!-- <div class="absolute text-white w-screen flex justify-between px-5 my-5 md:px-10">
   <a href="/" class="flex items-center">
     <span class="bg-primary text-white w-6 h-6 rounded-full flex items-center justify-center font-extrabold text-xs md:text-xl md:w-10 md:h-10">
       R
@@ -30,4 +73,4 @@
       </LinkTo>
     </span>
   </div>
-</div>
+</div> --}}
