@@ -1,33 +1,36 @@
 <NavBar @active="projects"/>
 
-<div class="pt-24 mx-20 text-white h-screen">
-  <div class="font-bold text-4xl underline">
+<div class="pt-20 text-white h-full mx-8 md:mx-10 lg:mx-20 md:pt-24">
+  <div class="font-bold underline text-xl md:text-3xl lg:text-4xl">
     <LinkTo @route="projects.index">
       Projects
     </LinkTo>
   </div>
 
-  <div class="flex mt-10">
-    <div class="w-4/6 mr-3">
-      <span class="text-xs">
+  <div class="flex flex-col flex-col-reverse mt-10 h-full overflow-scroll lg:flex-row" style="max-height: calc(100% - 85px);">
+    <div class="flex flex-col lg:w-4/6 md:mr-3">
+      <span class="hidden font-light text-gray-300 md:block text-xs mt-2">
         April 12 2020
       </span>
-      <h3 class="font-bold text-3xl">
+      <div class="mt-2 font-semibold md:mt-0 text-2xl md:text-3xl">
         Freshdesk Portal Theme - Welkin Vertikalsa
-      </h3>
-      <div>
+      </div>
+      <div class="text-gray-300 text-sm md:text-base">
         Welkin Vertikalsa is a simple vertical layout style portal theme for Freshdesk. It provides simple and user-friendly layouts to easily find knowledgebase articles in Freshdesk. It will provide a refreshing, friendly and positive experience for your users.
         <br>
         The Welkin Vertikalsa template will perfectly suit those websites that aim to keep their support page simple and efficient. Fully responsive and Retina ready.
       </div>
-      <div class="flex mt-8">
-        <button class="text-light rounded-full border-2 px-24 py-2
-          hover:border-primary hover:text-primary"
-          {{on "click" this.toggleDonatePopup}}>
-          Download
-        </button>
+
+      <div class="flex items-center justify-center my-8  lg:justify-start">
+        <div>
+          <button class="text-light rounded-full border-2 px-10 py-2 text-sm md:px-24
+            hover:border-primary hover:text-primary"
+            {{on "click" this.toggleDonatePopup}}>
+            Download
+          </button>
+        </div>
         <a href="/files/freshdesk-welkin-vertikalsa/demo/support/home.html" target="_blank">
-          <button class="text-light rounded-full border-2 px-24 py-2 ml-8
+          <button class="text-light whitespace-no-wrap rounded-full border-2 px-10 py-2 ml-8 text-sm md:px-24
             hover:border-primary hover:text-primary">
             Live preview
           </button>
@@ -35,8 +38,11 @@
       </div>
     </div>
     
-    <div class="w-4/12">
-      <img src="/images/virtical-portal-theme.png" alt="" class="h-56 object-cover rounded-md">
+    <div class="flex flex-col lg:w-4/12 mr-2 md:mr-5">
+      <span class="font-light text-gray-300 mb-1 md:hidden text-xs">
+        April 12 2020
+      </span>
+      <img src="/images/virtical-portal-theme.png" alt="" class="md:h-56 object-cover rounded-md">
     </div>
   </div>
 </div>
@@ -52,24 +58,24 @@
      {{svg-jar "close"}}
     </div>
   </div>
-  <div class="flex flex-col items-center justify-center px-24 pt-5 pb-10 h-full w-full">
+  <div class="flex flex-col items-center justify-center px-5 pt-2 pb-10 h-full w-full md:px-24 md:pt-5">
     {{#unless isDownloading}}
-      <div class="text-3xl font-semibold mb-1">
+      <div class="text-lg font-semibold mb-1 md:text-3xl">
         Would you like to buy me a  {{svg-jar "coffee" class="inline"}}  first
       </div>
-      <div class="text-medium mb-12">
+      <div class="text-sm mb-12 md:text-base">
         If you like my products you can even come back later and give a donation.
       </div>
 
       <div class="flex mb-12">
-        <button class="font-light rounded-full border-2 px-24 py-2
+        <button class="text-xs font-light rounded-lg border-2 px-5 py-2 lg:px-10 md:text-sm lg:rounded-full xl:px-24
           hover:border-primary hover:text-primary"
           {{on "click" this.downloadTheme}}>
           Na I like free stuff!
         </button>
         
         <a href="https://www.buymeacoffee.com/robie577"  target="_blank">
-          <button class="font-medium rounded-full border-2 px-24 py-2 ml-8"
+          <button class="text-xs font-medium rounded-lg border-2 px-5 py-2 ml-8 lg:px-10 md:text-sm lg:rounded-full xl:px-24"
               {{on "click" this.downloadTheme}}
             style="background-color: #5F7FFF; border-color: #5F7FFF">
             {{svg-jar "coffee" class="inline"}} Buy me a coffee
